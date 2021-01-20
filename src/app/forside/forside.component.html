@@ -1,0 +1,11 @@
+<h1 id="headline">My Images</h1>
+<div class="search">
+  <input [(ngModel)]="searchedValue" type="text" placeholder="Indtast Søgeord">
+  <button (click)="Search()">Søg</button>
+</div>
+<div id="images">
+  <div class="image" *ngFor="let image of imagearray | slice:0:3">
+    <img src="{{image.images.downsized_medium.url}}" alt="{{image.slug}}">
+    <p>{{image.title}}</p>
+  </div>
+</div>
